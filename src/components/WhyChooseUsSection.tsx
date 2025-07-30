@@ -59,14 +59,14 @@ const WhyChooseUsSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative bg-card border border-border rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fade-in backdrop-blur-sm"
+              className="group relative bg-card border border-border rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fade-in backdrop-blur-sm text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Glassy Background Effect */}
               <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl backdrop-blur-md"></div>
               
               {/* Icon */}
-              <div className={`relative w-14 h-14 mb-6 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center`}>
+              <div className={`relative w-14 h-14 mb-6 mx-auto bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center`}>
                 <feature.icon className="h-7 w-7 text-white" />
               </div>
 
