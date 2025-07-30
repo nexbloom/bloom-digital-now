@@ -59,11 +59,11 @@ const WhyChooseUsSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group relative bg-card border border-border rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 animate-fade-in"
+              className="group relative bg-card border border-border rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fade-in backdrop-blur-sm"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Background Gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-2xl`}></div>
+              {/* Glassy Background Effect */}
+              <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl backdrop-blur-md"></div>
               
               {/* Icon */}
               <div className={`relative w-14 h-14 mb-6 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center`}>
@@ -72,7 +72,7 @@ const WhyChooseUsSection = () => {
 
               {/* Content */}
               <div className="relative">
-                <h3 className="font-outfit font-semibold text-xl mb-4 text-foreground group-hover:text-coral-pink transition-colors duration-200">
+                <h3 className="font-outfit font-semibold text-xl mb-4 text-foreground transition-colors duration-200">
                   {feature.title}
                 </h3>
                 <p className="font-poppins text-muted-foreground leading-relaxed">
@@ -80,8 +80,8 @@ const WhyChooseUsSection = () => {
                 </p>
               </div>
 
-              {/* Hover Effect Border */}
-              <div className={`absolute inset-0 border-2 border-transparent bg-gradient-to-br ${feature.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}></div>
+              {/* Glassy Border Effect */}
+              <div className="absolute inset-0 border border-white/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>
