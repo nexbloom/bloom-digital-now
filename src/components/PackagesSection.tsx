@@ -20,7 +20,7 @@ const PackagesSection = () => {
     },
     {
       name: 'Growth Package',
-      price: 'R4,000',
+      price: 'R6,000',
       monthly: 'R250/month',
       description: 'A balanced solution for growing businesses wanting essential features and flexibility.',
       features: [
