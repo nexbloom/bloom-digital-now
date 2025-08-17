@@ -10,11 +10,11 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-secondary/30 to-background overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="text-center space-y-8 animate-fade-in">
           {/* Hero Badge */}
-          <div className="inline-flex items-center space-x-2 bg-gradient-primary text-white px-4 py-2 rounded-full font-poppins font-medium text-sm animate-float">
+          <div className="inline-flex items-center space-x-2 bg-coral text-white px-4 py-2 rounded-full font-poppins font-medium text-sm animate-float">
             <Sparkles className="h-4 w-4" />
             <span>Optimised. Modernised. NexBloomed.</span>
           </div>
@@ -23,7 +23,7 @@ const HeroSection = () => {
           <div className="space-y-4">
             <h1 className="font-outfit font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground leading-tight">
               Let Your Brand{' '}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
+              <span className="text-coral">
                 Bloom
               </span>{' '}
               Digitally
@@ -41,7 +41,7 @@ const HeroSection = () => {
             <Button
               onClick={scrollToContact}
               size="lg"
-              className="bg-gradient-primary hover:opacity-90 text-white border-0 font-outfit font-semibold text-lg px-8 py-4 h-auto group transition-all duration-300 animate-scale-in"
+              className="bg-coral hover:bg-coral/90 text-white border-0 font-outfit font-semibold text-lg px-8 py-4 h-auto group transition-all duration-300 animate-scale-in"
             >
               Get Your Free Website Draft
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
@@ -67,12 +67,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-coral-pink/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-lavender/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-deep-teal/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
-        </div>
       </div>
     </section>
   );

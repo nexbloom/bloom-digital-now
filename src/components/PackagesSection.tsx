@@ -16,7 +16,7 @@ const PackagesSection = () => {
         'Mobile-responsive design'
       ],
       popular: false,
-      gradient: 'from-coral-pink to-hot-pink'
+      color: 'coral'
     },
     {
       name: 'Growth Package',
@@ -31,7 +31,7 @@ const PackagesSection = () => {
         'Image gallery'
       ],
       popular: true,
-      gradient: 'from-lavender to-deep-teal'
+      color: 'teal'
     },
     {
       name: 'Thrive Package',
@@ -47,7 +47,7 @@ const PackagesSection = () => {
         'Advanced integrations (e.g. social media)'
       ],
       popular: false,
-      gradient: 'from-deep-teal to-forest-teal'
+      color: 'coral'
     }
   ];
 
@@ -64,7 +64,7 @@ const PackagesSection = () => {
         <div className="text-center space-y-6 mb-16">
           <h2 className="font-outfit font-bold text-3xl sm:text-4xl md:text-5xl text-foreground">
             Choose Your{' '}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-coral">
               Perfect Package
             </span>
           </h2>
@@ -79,15 +79,15 @@ const PackagesSection = () => {
               key={index}
               className={`relative overflow-hidden border-2 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-fade-in ${
                 pkg.popular
-                  ? 'border-coral-pink shadow-lg scale-105'
-                  : 'border-border hover:border-coral-pink/50'
+                  ? 'border-coral shadow-lg scale-105'
+                  : 'border-border hover:border-coral/50'
               }`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Popular Badge */}
               {pkg.popular && (
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="bg-gradient-primary text-white px-4 py-1 rounded-full flex items-center space-x-1">
+                  <div className="bg-coral text-white px-4 py-1 rounded-full flex items-center space-x-1">
                     <Star className="h-3 w-3 fill-current" />
                     <span className="font-poppins font-medium text-xs">Most Popular</span>
                   </div>
@@ -95,7 +95,7 @@ const PackagesSection = () => {
               )}
 
               <CardHeader className="text-center pb-4">
-                <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${pkg.gradient} rounded-2xl flex items-center justify-center`}>
+                <div className={`w-16 h-16 mx-auto mb-4 bg-${pkg.color} rounded-2xl flex items-center justify-center`}>
                   <span className="font-outfit font-bold text-white text-xl">
                     {pkg.name.charAt(0)}
                   </span>
@@ -123,7 +123,7 @@ const PackagesSection = () => {
                 <ul className="space-y-3">
                   {pkg.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3">
-                      <div className={`w-5 h-5 rounded-full bg-gradient-to-br ${pkg.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                      <div className={`w-5 h-5 rounded-full bg-${pkg.color} flex items-center justify-center flex-shrink-0 mt-0.5`}>
                         <Check className="h-3 w-3 text-white" />
                       </div>
                       <span className="font-poppins text-sm text-foreground">
@@ -137,7 +137,7 @@ const PackagesSection = () => {
                   onClick={scrollToContact}
                   className={`w-full font-outfit font-semibold ${
                     pkg.popular
-                      ? 'bg-gradient-primary hover:opacity-90 text-white'
+                      ? 'bg-coral hover:bg-coral/90 text-white'
                       : 'bg-secondary hover:bg-secondary/80 text-foreground border border-border'
                   } transition-all duration-200`}
                 >

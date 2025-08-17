@@ -101,7 +101,7 @@ const ContactSection = () => {
         <div className="text-center space-y-6 mb-16">
           <h2 className="font-outfit font-bold text-3xl sm:text-4xl md:text-5xl text-foreground">
             Ready to Get Your{' '}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+            <span className="text-coral">
               Website?
             </span>
           </h2>
@@ -214,7 +214,7 @@ const ContactSection = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-primary hover:opacity-90 text-white font-outfit font-semibold text-lg py-6 h-auto group transition-all duration-200"
+                  className="w-full bg-coral hover:bg-coral/90 text-white font-outfit font-semibold text-lg py-6 h-auto group transition-all duration-200"
                 >
                   {isSubmitting ? (
                     'Sending...'
@@ -247,7 +247,7 @@ const ContactSection = () => {
 
             <div className="space-y-4">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-coral rounded-lg flex items-center justify-center">
                   <Mail className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -262,7 +262,7 @@ const ContactSection = () => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-secondary rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-teal rounded-lg flex items-center justify-center">
                   <Phone className="h-6 w-6 text-white" />
                 </div>
                 <div>
@@ -277,7 +277,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-coral-pink/10 to-lavender/10 rounded-2xl p-6 border border-coral-pink/20">
+            <div className="bg-coral/10 rounded-2xl p-6 border border-coral/20">
               <h4 className="font-outfit font-semibold text-lg text-foreground mb-3">
                 Why Choose a Free Draft?
               </h4>

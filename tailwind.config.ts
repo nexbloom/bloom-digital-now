@@ -66,21 +66,9 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// NexBloom brand colors
-				'coral-pink': 'hsl(var(--coral-pink))',
-				'hot-pink': 'hsl(var(--hot-pink))',
-				'lavender': 'hsl(var(--lavender))',
-				'deep-teal': 'hsl(var(--deep-teal))',
-				'forest-teal': 'hsl(var(--forest-teal))',
-				'sky-blue': 'hsl(var(--sky-blue))',
-				'lime': 'hsl(var(--lime))',
-				'yellow': 'hsl(var(--yellow))',
-			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-accent': 'var(--gradient-accent)',
-				'gradient-hero': 'var(--gradient-hero)',
+				// Brand accent colors
+				'coral': 'hsl(var(--coral))',
+				'teal': 'hsl(var(--teal))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

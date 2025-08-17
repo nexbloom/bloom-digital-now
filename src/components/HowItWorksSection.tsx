@@ -7,21 +7,21 @@ const HowItWorksSection = () => {
       number: '01',
       title: 'Request Your Website',
       description: 'Tell us about your business. We\'ll build a stunning first draft for FREE in 48-72 hours.',
-      color: 'coral-pink'
+      color: 'coral'
     },
     {
       icon: Eye,
       number: '02',
       title: 'Review & Refine',
       description: 'Like what you see? We\'ll hop on a quick call to perfect the details.',
-      color: 'lavender'
+      color: 'teal'
     },
     {
       icon: Rocket,
       number: '03',
       title: 'Launch & Grow',
       description: 'We launch your site and you can start attracting more customers. It\'s that simple.',
-      color: 'deep-teal'
+      color: 'coral'
     }
   ];
 
@@ -46,20 +46,20 @@ const HowItWorksSection = () => {
             >
               {/* Connecting Line (desktop only) */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-20 left-full w-full h-0.5 bg-gradient-to-r from-border to-transparent transform translate-x-6 z-0"></div>
+                <div className="hidden md:block absolute top-20 left-full w-full h-0.5 bg-border transform translate-x-6 z-0"></div>
               )}
 
               <div className="relative bg-card border border-border rounded-2xl p-8 text-center group-hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
                 {/* Step Number */}
                 <div className="absolute -top-4 left-8">
-                  <div className={`w-8 h-8 bg-${step.color} rounded-full flex items-center justify-center`}>
+                  <div className={`w-8 h-8 ${step.color === 'coral' ? 'bg-coral' : 'bg-teal'} rounded-full flex items-center justify-center`}>
                     <span className="font-outfit font-bold text-sm text-white">{step.number}</span>
                   </div>
                 </div>
 
                 {/* Icon */}
-                <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-${step.color}/20 to-${step.color}/10 rounded-2xl flex items-center justify-center`}>
-                  <step.icon className={`h-8 w-8 text-${step.color}`} />
+                <div className={`w-16 h-16 mx-auto mb-6 ${step.color === 'coral' ? 'bg-coral/20' : 'bg-teal/20'} rounded-2xl flex items-center justify-center`}>
+                  <step.icon className={`h-8 w-8 ${step.color === 'coral' ? 'text-coral' : 'text-teal'}`} />
                 </div>
 
                 {/* Content */}
@@ -81,7 +81,7 @@ const HowItWorksSection = () => {
           </p>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="font-outfit font-semibold text-coral-pink hover:text-hot-pink transition-colors duration-200"
+            className="font-outfit font-semibold text-coral hover:text-coral/80 transition-colors duration-200"
           >
             Start Your Free Website Draft →
           </button>

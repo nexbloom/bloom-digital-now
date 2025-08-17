@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-coral rounded-lg flex items-center justify-center">
                 <span className="text-white font-outfit font-bold text-xl">N</span>
               </div>
               <span className="font-outfit font-bold text-xl">NexBloom</span>
@@ -68,7 +68,7 @@ const Footer = () => {
             <div className="pt-2">
               <Button
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-gradient-primary hover:opacity-90 text-white font-outfit font-medium"
+                className="bg-coral hover:bg-coral/90 text-white font-outfit font-medium"
               >
                 Get Your Free Draft
               </Button>

@@ -51,7 +51,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Company Name */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-coral rounded-lg flex items-center justify-center">
               <span className="text-white font-outfit font-bold text-xl">N</span>
             </div>
             <span className="font-outfit font-bold text-xl text-foreground">NexBloom</span>
