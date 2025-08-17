@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Phone, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 interface FormData {
   name: string;
@@ -52,11 +53,21 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      // TODO: Replace with actual Supabase database integration
-      console.log('Form submission:', formData);
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Save form data to Supabase
+      const { error } = await supabase
+        .from('contact_forms')
+        .insert({
+          name: formData.name,
+          email: formData.email,
+          message: formData.description,
+          company: formData.company || null,
+          telephone: formData.telephone || null,
+          current_website: formData.currentWebsite || null
+        });
+
+      if (error) {
+        throw error;
+      }
       
       toast({
         title: "Message Sent Successfully!",
@@ -73,6 +84,7 @@ const ContactSection = () => {
         currentWebsite: ''
       });
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
